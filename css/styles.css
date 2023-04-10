@@ -1,0 +1,189 @@
+*{
+    margin: 0;
+    padding: 0;
+    outline: none;
+    list-style:none;
+    text-decoration: none;
+    box-sizing: border-box;
+
+    --azul:#0025db;
+    --preto:#1a1f2f;
+    --azul:#212830;
+    --cinza:#a0abc9;
+    --laranja:#fcaa23;
+    --shadow:#a0abc944;
+
+    --padding-mobile:0px 16px;
+    --size-title: 44px;
+    --size-p:15px;
+
+
+    font-family: 'Questrial', sans-serif;
+    
+}
+
+.container_header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    min-height: 90px;
+    padding: var(--padding-mobile);
+
+
+    /*borda para marcação*/
+    border-bottom: 1px solid ;
+
+}
+
+.container_header__navbar{
+    display: none;
+}
+
+.container_header__navbar.ativo {
+  display: block;
+  position: absolute;   
+  top: 0; 
+  left: 0; 
+  
+
+}
+
+.container_header__menu {
+    background-color: yellow;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    height: 100vh;
+    width: 100vw;
+    
+}
+
+.container_header__menu > li > a{
+    display: block;
+    background-color: red;
+    /*cor para teste*/
+
+
+    padding: 8px 100px;
+    color: var(--preto);
+    font-size: 22px;
+    font-size: 500;
+    cursor: pointer;
+    
+}
+
+.container_header__menu > li > a:hover,.container_header__menu > li > a .ativo{
+    color: var(--azul);
+}
+
+.close_dropMenu{
+    display: block;
+    margin-top: 30px;
+    
+}
+
+
+
+
+/*Estilo do Container de Apresentação dos Serviços*/
+
+
+.container_servicos{
+    padding: 60px 30px;
+
+}
+
+.container_servicos > h3{
+    font-size: 36px;
+    font-weight: 600;
+    line-height: 40px;
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.container_servicos > h5{
+    font-size: 18px;
+    color: var(--azul);
+    font-weight: 400;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.container_servicos__list{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+}
+
+.container_servicos__list > li {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    height: 360px;
+    width: 260px;
+    border-radius: 20px;
+    padding: 0px 60px;
+    text-align: left;
+    box-shadow: 0.5px 5px 40px #a0abc944;
+}
+
+.container_servicos__list > li:hover {
+
+    
+    box-shadow: 1px 1px 60px #a0abc971;
+}
+
+.container_servicos__list > li > h4 {
+    font-size: 24px;
+    color: var(--preto);
+}
+
+.container_servicos__list > li > p {
+    font-size: 15px;
+    color: var(--cinza);
+}
+
+
+
+@media (min-width:768px) {
+
+    .container_servicos{
+        padding: 60px 55px;
+    
+    }
+    .container_servicos__list{
+        flex-flow: row wrap;
+        align-items: center;
+        justify-content: space-between;
+        gap: 36px;
+    }
+    .container_servicos__list > li {
+        
+        height: 300px;
+        width: 280px;
+        box-shadow: 0.5px 1px 20px #e6e6f79d;
+        
+    }
+    
+}
+
+/*Estilo do Container de Apresentação dos Serviços*/
+
+
+
+
+.container_marketing{
+
+}
+
+
+
+
+
+
+
