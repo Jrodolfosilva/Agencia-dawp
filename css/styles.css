@@ -7,8 +7,8 @@
     box-sizing: border-box;
 
     --azul:#0025db;
-    --preto:#1a1f2f;
-    --azul:#212830;
+    --preto:#050b1d;
+    --azul-padrao:#212830;
     --cinza:#a0abc9;
     --laranja:#fcaa23;
     --shadow:#a0abc944;
@@ -27,8 +27,10 @@
     justify-content: space-between;
     align-items: center;
     position: relative;
-    min-height: 90px;
+    min-height: 80px;
     padding: var(--padding-mobile);
+    background-color: var(--azul-padrao);
+    z-index: 9999;
 
 
     /*borda para marcação*/
@@ -50,10 +52,9 @@
 }
 
 .container_header__menu {
-    background-color: yellow;
+    background-color: var(--preto);
     display: flex;
     flex-direction: column;
-    align-items: center;
     gap: 20px;
     height: 100vh;
     width: 100vw;
@@ -66,7 +67,7 @@
     /*cor para teste*/
 
 
-    padding: 8px 100px;
+    padding: 012px 20px ;
     color: var(--preto);
     font-size: 22px;
     font-size: 500;
@@ -80,11 +81,116 @@
 
 .close_dropMenu{
     display: block;
-    margin-top: 30px;
+    min-width: 100%;
+    padding: 20px ;
+    background-color: #ffffff0c;
     
 }
 
+@media (min-width:768px) {
 
+    .close_dropMenu{
+        display: none;
+    }
+    .container_header__DropMenu{
+
+        display: none;
+    }
+
+    .container_header__navbar{
+        display: flex;
+
+    }
+
+    .container_header__menu {
+        flex-direction: row;
+        height: auto;
+        width: auto;
+    }
+    .container_header__menu > li > a{
+        padding: 0px 8px;
+        font-size: 20px;
+        font-weight: 500;
+
+    }
+
+
+    
+}
+
+/*Estilo do Container de inicial da homa*/
+
+.container_principal{
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.container_principal__content{
+
+    padding: 0px 30px;
+    margin-top: -15px;
+   
+}
+
+.container_principal__content h5{
+
+    font-size: 18px;
+    color: var(--azul);
+    font-weight: 500;
+    text-align: left;
+    margin-bottom: 12px;
+}
+
+.container_principal__content > h2{
+
+    font-size: 22px;
+    font-weight: 600;
+    line-height: 25px;
+    text-align: left;
+}
+
+.container_principal__content > button{
+    padding: 12px 24px;
+    font-size: 16px;
+    font-weight: 500;
+    border-radius: 8px;
+    border: none;
+    background-color: #fcaa23;
+    margin-top: 12px;
+    
+}
+.container_principal__content > button> a{
+    color:#fff;
+
+}
+
+.container_principal__img{
+
+
+    padding-top: 60px;
+}
+
+.container_principal__img > img{
+    
+    width: 180px;
+    
+    
+}
+
+.container_principal__img > img:first-child{
+    
+    min-width: 280px;
+    
+}
+.container_principal__img > img:last-child{
+    position: absolute;
+    top: 99px;
+    left: 0;
+    right: 0;
+    
+}
 
 
 /*Estilo do Container de Apresentação dos Serviços*/
@@ -95,20 +201,20 @@
 
 }
 
-.container_servicos > h3{
-    font-size: 36px;
+.container_servicos > h2{
+    font-size: 22px;
     font-weight: 600;
-    line-height: 40px;
-    text-align: center;
+    line-height: 30px;
+    text-align: left;
     margin-bottom: 60px;
 }
 
 .container_servicos > h5{
     font-size: 18px;
     color: var(--azul);
-    font-weight: 400;
-    text-align: center;
-    margin-bottom: 30px;
+    font-weight: 500;
+    text-align: left;
+    margin-bottom: 12px;
 }
 
 .container_servicos__list{
@@ -148,7 +254,7 @@
     color: var(--cinza);
 }
 
-
+/*Estilo do desktop*/
 
 @media (min-width:768px) {
 
